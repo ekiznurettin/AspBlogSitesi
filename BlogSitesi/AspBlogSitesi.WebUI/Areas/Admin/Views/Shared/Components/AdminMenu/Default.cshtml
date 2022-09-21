@@ -1,0 +1,62 @@
+﻿@model AspBlogSitesi.WebUI.Areas.Admin.Models.UserWithRolesViewModel
+<aside id="sidebar-left" class="sidebar-left">
+
+    <div class="sidebar-header">
+        <div class="sidebar-title">
+            Menü
+        </div>
+        <div class="sidebar-toggle hidden-xs" data-toggle-class="sidebar-left-collapsed" data-target="html" data-fire-event="sidebar-left-toggle">
+            <i class="fa fa-bars" aria-label="Toggle sidebar"></i>
+        </div>
+    </div>
+
+    <div class="nano">
+        <div class="nano-content">
+            <nav id="menu" class="nav-main" role="navigation">
+                <ul class="nav nav-main">
+                    <li class="nav-active">
+                        <a asp-area="Admin" asp-controller="Home" asp-action="Index">
+                            <i class="fa fa-home" aria-hidden="true"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-area="Admin" asp-controller="Category" asp-action="Index">
+                            <i class="fa fa-th-list" aria-hidden="true"></i>
+                            <span>Kategoriler</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-area="Admin" asp-controller="Article" asp-action="Index">
+                            <i class="fa fa-file" aria-hidden="true"></i>
+                            <span>Makaleler</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-area="Admin" asp-controller="Comment" asp-action="Index">
+                            <i class="fa fa-comment" aria-hidden="true"></i>
+                            <span>Yorumlar</span>
+                        </a>
+                    </li>
+                    @if (Model.Roles.Any(r=>r.Equals("Admin")))
+                    {
+                        <li>
+                            <a asp-area="Admin" asp-controller="Role" asp-action="Index">
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                <span>Roller</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a asp-area="Admin" asp-controller="User" asp-action="Index">
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                                <span>Kullanıcılar</span>
+                            </a>
+                        </li>
+                    }
+
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+</aside>

@@ -1,0 +1,102 @@
+﻿@model AspBlogSitesi.Entities.Dtos.CategoryListDto
+@using AspBlogSitesi.Core.Utilities.ComplexTypes
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "Kategoriler";
+}
+
+<div id="modalPlaceHolder" aria-hidden="true">
+
+</div>
+
+<header class="page-header">
+    <h2>Kategoriler</h2>
+    <div class="right-wrapper pull-right">
+        <ol class="breadcrumbs">
+            <li>
+                <a href="index.html">
+                    <i class="fa fa-home"></i>
+                </a>
+            </li>
+            <li><span>Kategoriler</span></li>
+        </ol>
+        <a class="sidebar-right-toggle" data-open="sidebar-right">
+            <i class="fa fa-chevron-left"></i>
+        </a>
+    </div>
+</header>
+@if (Model.ResultStatus == ResultStatus.Success)
+{
+    <section class="panel">
+        <div class="panel-body">
+            <div class="spinner-border" style="display:none" role="status">
+                <span class="visually-hidden">Yükleniyor...</span>
+            </div>
+            <table class="table table-bordered btn-xs" id="categoriesTable">
+                <thead>
+                    <tr role="row">
+                        <th>Id</th>
+                        <th>Kat.Adı</th>
+                        <th>Açıklaması</th>
+                        <th>Aktif</th>
+                        <th>Silinmiş</th>
+                        <th>Not</th>
+                        <th>Kay.Tarih</th>
+                        <th>Ekleyen</th>
+                        <th>Günc.Tarihi</th>
+                        <th>Güncelleyen</th>
+                        <th> <button class="btn btn-success btn-xs btn-add left">Yeni</button></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Categories)
+                    {
+                        <tr name="@item.Id">
+                            <td>@item.Id</td>
+                            <td>@item.Name</td>
+                            <td>@item.Description</td>
+                            <td>@(item.IsActive?"Evet":"Hayır")</td>
+                            <td>@(item.IsDeleted?"Evet":"Hayır")</td>
+                            <td>@item.Note</td>
+                            <td>@item.CreatedDate.ToShortDateString()</td>
+                            <td>@item.CreatedByName</td>
+                            <td>@item.ModifiedDate.ToShortDateString()</td>
+                            <td>@item.ModifiedByName</td>
+                            <td>
+                                <button class="btn btn-primary btn-xs btn-update" data-id="@item.Id"><span class="fa fa-edit"></span></button>
+                                <button class="btn btn-danger btn-xs btn-delete" data-id="@item.Id"><span class="fa fa-minus-circle"></span></button>
+                               
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+                <tfoot>
+                    <tr role="row">
+                        <th>Id</th>
+                        <th>Kat.Adı</th>
+                        <th>Açıklaması</th>
+                        <th>Aktif</th>
+                        <th>Silinmiş</th>
+                        <th>Not</th>
+                        <th>Kay.Tarih</th>
+                        <th>Ekleyen</th>
+                        <th>Günc.Tarihi</th>
+                        <th>Güncelleyen</th>
+                        <th>İşlemler</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </section>
+}
+@if (Model.ResultStatus == ResultStatus.Error)
+{
+    <div class="alert alert-danger">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        <strong>Hata!</strong> @Model.Message   Anasayfaya dönmek için <a asp-area="Admin" asp-controller="Home" asp-action="Index" class="alert-link">tıklayınız</a>
+    </div>
+}
+
+@section Scripts{
+    <script src="~/Admin/js/categoryIndex.js"></script>
+}

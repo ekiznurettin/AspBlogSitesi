@@ -1,0 +1,114 @@
+﻿@model AspBlogSitesi.Entities.Dtos.ArticleListDto
+@using AspBlogSitesi.Core.Utilities.ComplexTypes
+@{
+    ViewData["Title"] = "Makaleler";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<div id="modalPlaceHolder" aria-hidden="true">
+
+</div>
+<header class="page-header">
+    <h2>Makaleler</h2>
+    <div class="right-wrapper pull-right">
+        <ol class="breadcrumbs">
+            <li>
+                <a href="index.html">
+                    <i class="fa fa-home"></i>
+                </a>
+            </li>
+            <li><span>Makaleler</span></li>
+        </ol>
+        <a class="sidebar-right-toggle" data-open="sidebar-right">
+            <i class="fa fa-chevron-left"></i>
+        </a>
+    </div>
+</header>
+@if (Model.ResultStatus == ResultStatus.Success)
+{
+
+    <section class="panel">
+        <div class="panel-body">
+            <div class="spinner-border" style="display:none" role="status">
+                <span class="visually-hidden">Yükleniyor...</span>
+            </div>
+            <table class="table table-bordered btn-xs" id="articlesTable">
+                <thead>
+                    <tr>
+                        <th>Resim</th>
+                        <th>Kategori</th>
+                        <th>Başlık</th>
+                        <th>Tarih</th>
+                        <th>Okunma</th>
+                        <th>Yorum</th>
+                        <th>Aktif</th>
+                        <th>Silindi</th>
+                        <th>Kay.Tarih</th>
+                        <th>Ekleyen</th>
+                        <th>Günc.Tarihi</th>
+                        <th>Güncelleyen</th>
+                        <th> <a class="btn btn-success btn-xs left" asp-area="Admin" asp-controller="Article" asp-action="Add">Yeni</a></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Articles)
+                    {
+                        <tr name="@item.Id">
+                            <td><img src="~/Admin/image/@item.Thumbnail" class="my-img-table" /></td>
+                            <td>@item.Category.Name</td>
+                            <td>@item.Title</td>
+                            <td>@item.Date.ToShortDateString()</td>
+                            <td>@item.ViewCount</td>
+                            <td>@item.CommentCount</td>
+                            <td>@(item.IsActive ? "Evet" : "Hayır")</td>
+                            <td>@(item.IsDeleted ? "Evet" : "Hayır")</td>
+                            <td>@item.CreatedDate.ToShortDateString()</td>
+                            <td>@item.CreatedByName</td>
+                            <td>@item.ModifiedDate.ToShortDateString()</td>
+                            <td>@item.ModifiedByName</td>
+                            <td>
+                                <a class="btn btn-primary btn-xs btn-update" data-id="@item.Id" asp-area="Admin" asp-controller="Article" asp-action="Update" asp-route-articleId="@item.Id"><span class="fa fa-edit"></span></a>
+                                <button class="btn btn-danger btn-xs btn-delete" data-id="@item.Id"><span class="fa fa-minus-circle"></span></button>
+
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>Resim</th>
+                        <th>Kategori</th>
+                        <th>Başlık</th>
+                        <th>Tarih</th>
+                        <th>Okunma</th>
+                        <th>Yorum</th>
+                        <th>Aktif</th>
+                        <th>Silindi</th>
+                        <th>Kay.Tarih</th>
+                        <th>Ekleyen</th>
+                        <th>Günc.Tarihi</th>
+                        <th>Güncelleyen</th>
+                        <th>İşlemler</th>
+                    </tr>
+                </tfoot>
+            </table>
+
+        </div>
+    </section>
+
+}
+@if (Model.ResultStatus == ResultStatus.Error)
+{
+    <div class="alert alert-danger">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        <strong>Hata!</strong> @Model.Message   Anasayfaya dönmek için <a asp-area="Admin" asp-controller="Home" asp-action="Index" class="alert-link">tıklayınız</a>
+    </div>
+}
+
+@section Scripts{
+    <script src="~/Admin/js/articleIndex.js"></script>
+}
+
+
+@section Styles{
+
+}

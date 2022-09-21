@@ -1,0 +1,99 @@
+﻿@model AspBlogSitesi.Entities.Dtos.UserUpdateDto
+@using AspBlogSitesi.Core.Utilities.ComplexTypes
+@{
+    ViewData["Title"] = "Bilgileri Güncelle";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<header class="page-header">
+    <h2>Bilgileri Düzenle</h2>
+
+    <div class="right-wrapper pull-right">
+        <ol class="breadcrumbs">
+            <li>
+                <a href="index.html">
+                    <i class="fa fa-home"></i>
+                </a>
+            </li>
+            <li><span>Bilgileri Düzenle</span></li>
+            <li><span>Kullanıcı</span></li>
+        </ol>
+
+        <a class="sidebar-right-toggle" data-open="sidebar-right"><i class="fa fa-chevron-left"></i></a>
+    </div>
+</header>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="panel mt-1">
+            <div class="panel-heading">
+                <h1 class="text-center"><span class="fas-fa-edit"></span> Profil Düzenle</h1>
+            </div>
+            <form asp-action="ChangeDetails" asp-controller="User" enctype="multipart/form-data" method="post" id="form-user-update">
+                <div class="panel-body">
+                    <div class="col-md-6">
+                        <div asp-validation-summary="All" class="text-danger" id="validation-summary"></div>
+                        <input type="hidden" asp-for="Id" />
+                        <div class="form-group">
+                            <label asp-for="Name"></label>
+                            <input type="text" class="form-control" asp-for="Name" placeholder="Lütfen, adınızı giriniz" />
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Surname"></label>
+                            <input type="text" class="form-control" asp-for="Surname" placeholder="Lütfen, soyadınızı giriniz" />
+                            <span asp-validation-for="Surname" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="UserName"></label>
+                            <input type="text" class="form-control" asp-for="UserName" placeholder="Lütfen, kullanıcı adı giriniz" />
+                            <span asp-validation-for="UserName" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Email"></label>
+                            <input type="email" class="form-control" asp-for="Email" placeholder="Lütfen, E-posta adresinizi giriniz" />
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="BirthDate"></label>
+                            <input type="text" class="form-control" asp-for="BirthDate" placeholder="Lütfen, soyadınızı giriniz" />
+                            <span asp-validation-for="BirthDate" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label asp-for="BirthPlace"></label>
+                            <input type="text" class="form-control" asp-for="BirthPlace" placeholder="Lütfen, soyadınızı giriniz" />
+                            <span asp-validation-for="BirthPlace" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Gender"></label>
+                            <select class="form-control" asp-for="Gender" asp-items="Html.GetEnumSelectList<Gender>()">
+                                <option value="0">Seçiniz..</option>
+                            </select>
+                            <span asp-validation-for="Gender" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="PhoneNumber"></label>
+                            <input type="text" class="form-control" asp-for="PhoneNumber" placeholder="Lütfen, telefon numaranızı giriniz" />
+                            <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Picture"></label>
+                            <input asp-for="Picture" type="hidden" />
+                            <img class="img-fluid img-thumbnail my-img" src="~/Admin/image/@Model.Picture" alt="@Model.UserName" />
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="PictureFile"></label>
+                            <input type="file" accept="image/*" class="form-control-file" asp-for="PictureFile" placeholder="Lütfen, telefon numaranızı giriniz" />
+                            <span asp-validation-for="PictureFile" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="panel-footer">
+                    <button type="submit" class="btn btn-primary btn-block"> <span class="fa fa-save"></span> Kaydet</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

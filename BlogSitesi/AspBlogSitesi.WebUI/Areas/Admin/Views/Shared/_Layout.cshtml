@@ -1,0 +1,87 @@
+﻿<!doctype html>
+<html class="fixed" lang="tr">
+<head>
+
+    <!-- Basic -->
+    <meta charset="UTF-8">
+
+    <title>@ViewBag.Title - Admnin Paneli | Programmers Blog</title>
+    <meta name="keywords" content="HTML5 Admin Template" />
+    <meta name="description" content="JSOFT Admin - Responsive HTML5 Template">
+    <meta name="author" content="JSOFT.net">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!-- Web Fonts  -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Shadows+Into+Light" rel="stylesheet" type="text/css">
+    @await Html.PartialAsync("_AdminCSSPartial")
+    @await RenderSectionAsync("Styles", false)
+    <link href="~/Admin/css/site.css" rel="stylesheet" />
+</head>
+<body>
+    <section class="body">
+        <!-- start: header -->
+        @await Component.InvokeAsync("AdminHeader")
+        <!-- end: header -->
+
+        <div class="inner-wrapper">
+            <!-- start: sidebar -->
+            @await Component.InvokeAsync("AdminMenu")
+            <!-- end: sidebar -->
+
+            <section role="main" class="content-body" style="padding:0 !important">
+                @if (TempData["Success"] != null)
+                {
+                    <div class="alert alert-success mt-2" role="alert">
+                        @TempData["Success"]
+                    </div>
+                }
+                @RenderBody()
+            </section>
+        </div>
+
+        <aside id="sidebar-right" class="sidebar-right">
+            <div class="nano">
+                <div class="nano-content">
+                    <a href="#" class="mobile-close visible-xs">
+                        Collapse <i class="fa fa-chevron-right"></i>
+                    </a>
+
+                    <div class="sidebar-right-wrapper">
+
+                        <div class="sidebar-widget widget-calendar">
+                            <h6>Upcoming Tasks</h6>
+                            <div data-plugin-datepicker data-plugin-skin="dark"></div>
+
+                            <ul>
+                                <li>
+                                    <time datetime="2014-04-19T00:00+00:00">04/19/2014</time>
+                                    <span>Company Meeting</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="sidebar-widget widget-friends">
+                            <h6>Friends</h6>
+                            <ul>
+                                <li class="status-online">
+                                    <figure class="profile-picture">
+                                        <img src="~/Admin/assets/images/!sample-user.jpg" alt="Joseph Doe" class="img-circle">
+                                    </figure>
+                                    <div class="profile-info">
+                                        <span class="name">Joseph Doe Junior</span>
+                                        <span class="title">Hey, how are you?</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </section>
+    @await Html.PartialAsync("_AdminJSPartial")
+    @await RenderSectionAsync("Scripts", false)
+
+</body>
+</html>

@@ -1,0 +1,387 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\repos\\repos\\BlogSitesi\\AspBlogSitesi.WebUI\\AspBlogSitesi.WebUI.csproj": {}
+  },
+  "projects": {
+    "D:\\repos\\repos\\BlogSitesi\\AspBlogSitesi.Businnes\\AspBlogSitesi.Businnes.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\repos\\repos\\BlogSitesi\\AspBlogSitesi.Businnes\\AspBlogSitesi.Businnes.csproj",
+        "projectName": "AspBlogSitesi.Businnes",
+        "projectPath": "D:\\repos\\repos\\BlogSitesi\\AspBlogSitesi.Businnes\\AspBlogSitesi.Businnes.csproj",
+        "packagesPath": "C:\\Users\\ekizn\\.nuget\\packages\\",
+        "outputPath": "D:\\repos\\repos\\BlogSitesi\\AspBlogSitesi.Businnes\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ekizn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\repos\\repos\\BlogSitesi\\AspBlogSitesi.Core\\AspBlogSitesi.Core.csproj": {
+                "projectPath": "D:\\repos\\repos\\BlogSitesi\\AspBlogSitesi.Core\\AspBlogSitesi.Core.csproj"
+              },
+              "D:\\repos\\repos\\BlogSitesi\\AspBlogSitesi.DataAccess\\AspBlogSitesi.DataAccess.csproj": {
+                "projectPath": "D:\\repos\\repos\\BlogSitesi\\AspBlogSitesi.DataAccess\\AspBlogSitesi.DataAccess.csproj"
+              },
+              "D:\\repos\\repos\\BlogSitesi\\AspBlogSitesi.Entities\\AspBlogSitesi.Entities.csproj": {
+                "projectPath": "D:\\repos\\repos\\BlogSitesi\\AspBlogSitesi.Entities\\AspBlogSitesi.Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\repos\\repos\\BlogSitesi\\AspBlogSitesi.Core\\AspBlogSitesi.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\repos\\repos\\BlogSitesi\\AspBlogSitesi.Core\\AspBlogSitesi.Core.csproj",
+        "projectName": "AspBlogSitesi.Core",
+        "projectPath": "D:\\repos\\repos\\BlogSitesi\\AspBlogSitesi.Core\\AspBlogSitesi.Core.csproj",
+        "packagesPath": "C:\\Users\\ekizn\\.nuget\\packages\\",
+        "outputPath": "D:\\repos\\repos\\BlogSitesi\\AspBlogSitesi.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ekizn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\repos\\repos\\BlogSitesi\\AspBlogSitesi.DataAccess\\AspBlogSitesi.DataAccess.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\repos\\repos\\BlogSitesi\\AspBlogSitesi.DataAccess\\AspBlogSitesi.DataAccess.csproj",
+        "projectName": "AspBlogSitesi.DataAccess",
+        "projectPath": "D:\\repos\\repos\\BlogSitesi\\AspBlogSitesi.DataAccess\\AspBlogSitesi.DataAccess.csproj",
+        "packagesPath": "C:\\Users\\ekizn\\.nuget\\packages\\",
+        "outputPath": "D:\\repos\\repos\\BlogSitesi\\AspBlogSitesi.DataAccess\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ekizn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\repos\\repos\\BlogSitesi\\AspBlogSitesi.Entities\\AspBlogSitesi.Entities.csproj": {
+                "projectPath": "D:\\repos\\repos\\BlogSitesi\\AspBlogSitesi.Entities\\AspBlogSitesi.Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\repos\\repos\\BlogSitesi\\AspBlogSitesi.Entities\\AspBlogSitesi.Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\repos\\repos\\BlogSitesi\\AspBlogSitesi.Entities\\AspBlogSitesi.Entities.csproj",
+        "projectName": "AspBlogSitesi.Entities",
+        "projectPath": "D:\\repos\\repos\\BlogSitesi\\AspBlogSitesi.Entities\\AspBlogSitesi.Entities.csproj",
+        "packagesPath": "C:\\Users\\ekizn\\.nuget\\packages\\",
+        "outputPath": "D:\\repos\\repos\\BlogSitesi\\AspBlogSitesi.Entities\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ekizn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\repos\\repos\\BlogSitesi\\AspBlogSitesi.Core\\AspBlogSitesi.Core.csproj": {
+                "projectPath": "D:\\repos\\repos\\BlogSitesi\\AspBlogSitesi.Core\\AspBlogSitesi.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.Extensions.Identity.Stores": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\repos\\repos\\BlogSitesi\\AspBlogSitesi.WebUI\\AspBlogSitesi.WebUI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\repos\\repos\\BlogSitesi\\AspBlogSitesi.WebUI\\AspBlogSitesi.WebUI.csproj",
+        "projectName": "AspBlogSitesi.WebUI",
+        "projectPath": "D:\\repos\\repos\\BlogSitesi\\AspBlogSitesi.WebUI\\AspBlogSitesi.WebUI.csproj",
+        "packagesPath": "C:\\Users\\ekizn\\.nuget\\packages\\",
+        "outputPath": "D:\\repos\\repos\\BlogSitesi\\AspBlogSitesi.WebUI\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ekizn\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\repos\\repos\\BlogSitesi\\AspBlogSitesi.Businnes\\AspBlogSitesi.Businnes.csproj": {
+                "projectPath": "D:\\repos\\repos\\BlogSitesi\\AspBlogSitesi.Businnes\\AspBlogSitesi.Businnes.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.11, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            },
+            "NToastNotify": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[5.0.17, 5.0.17]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
