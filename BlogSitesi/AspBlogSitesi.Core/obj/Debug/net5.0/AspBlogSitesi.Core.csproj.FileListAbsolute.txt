@@ -1,0 +1,12 @@
+C:\Users\EKIZ\source\repos\BlogSitesi\AspBlogSitesi.Core\bin\Debug\net5.0\AspBlogSitesi.Core.deps.json
+C:\Users\EKIZ\source\repos\BlogSitesi\AspBlogSitesi.Core\bin\Debug\net5.0\AspBlogSitesi.Core.dll
+C:\Users\EKIZ\source\repos\BlogSitesi\AspBlogSitesi.Core\bin\Debug\net5.0\ref\AspBlogSitesi.Core.dll
+C:\Users\EKIZ\source\repos\BlogSitesi\AspBlogSitesi.Core\bin\Debug\net5.0\AspBlogSitesi.Core.pdb
+C:\Users\EKIZ\source\repos\BlogSitesi\AspBlogSitesi.Core\obj\Debug\net5.0\AspBlogSitesi.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\EKIZ\source\repos\BlogSitesi\AspBlogSitesi.Core\obj\Debug\net5.0\AspBlogSitesi.Core.AssemblyInfoInputs.cache
+C:\Users\EKIZ\source\repos\BlogSitesi\AspBlogSitesi.Core\obj\Debug\net5.0\AspBlogSitesi.Core.AssemblyInfo.cs
+C:\Users\EKIZ\source\repos\BlogSitesi\AspBlogSitesi.Core\obj\Debug\net5.0\AspBlogSitesi.Core.csproj.CoreCompileInputs.cache
+C:\Users\EKIZ\source\repos\BlogSitesi\AspBlogSitesi.Core\obj\Debug\net5.0\AspBlogSitesi.Core.dll
+C:\Users\EKIZ\source\repos\BlogSitesi\AspBlogSitesi.Core\obj\Debug\net5.0\ref\AspBlogSitesi.Core.dll
+C:\Users\EKIZ\source\repos\BlogSitesi\AspBlogSitesi.Core\obj\Debug\net5.0\AspBlogSitesi.Core.pdb
+C:\Users\EKIZ\source\repos\BlogSitesi\AspBlogSitesi.Core\obj\Debug\net5.0\AspBlogSitesi.Core.csproj.AssemblyReference.cache
